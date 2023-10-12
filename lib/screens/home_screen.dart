@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                   height: 350,
                   width: 650,
                   decoration: const BoxDecoration(
-                    color: Color.fromARGB(255, 235, 193, 7),
+                    color: Color(0xFFFFAB40),
                   ),
                 ),
               ),
@@ -65,24 +65,60 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
-                child: const Column(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       '📍Axis-en-Province',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w300,
                       ),
                     ),
-                    SizedBox(height: 8),
-                    Text(
+                    const SizedBox(height: 8),
+                    const Text(
                       'Good Morning',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
+                    Image.asset('assets/2.png',
+                    width: 300, height: 250,),
+                    const Center(
+                      child: Text(
+                        '21°C',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    const Center(
+                      child: Text(
+                        'THUNDERSTORM',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset('assets/11.png',
+                            scale: 8,),
+                          ],
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),
