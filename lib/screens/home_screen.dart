@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -83,8 +84,11 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
-                    Image.asset('assets/2.png',
-                    width: 300, height: 250,),
+                    Image.asset(
+                      'assets/2.png',
+                      width: 300,
+                      height: 250,
+                    ),
                     const Center(
                       child: Text(
                         '21°C',
@@ -113,8 +117,34 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Image.asset('assets/11.png',
-                            scale: 8,),
+                            Image.asset(
+                              'assets/11.png',
+                              scale: 8,
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'sunrise',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w300,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 3,
+                                ),
+                                Text(
+                                  '5:34 am',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700),
+                                ),
+                              ],
+                            )
                           ],
                         )
                       ],
